@@ -1,4 +1,4 @@
-<h1 align="center"> RocketFlix - GCFlix </h1>
+<h1 align="center"> Lista de presença </h1>
 
 ## 🚀 Tecnologias utilizadas
 
