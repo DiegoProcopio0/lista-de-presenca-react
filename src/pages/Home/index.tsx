@@ -6,13 +6,23 @@ import React,{ useState, useEffect } from 'react';
 
 import './styles.css';
 
-import { Card }  from '../../components/card';
+import { Card, CardProps }  from '../../components/card';
+
+type ProfileResponse = {
+  name: string,
+  avatar_url: string,
+}
+
+type User = {
+  name: string,
+  avatar: string,
+}
 
 export function Home() {
 
   const [studentName, setStudentName] = useState("")
-  const [students, setStudent] = useState([])
-  const [user, setUser] = useState({name: '', avatar: ''})
+  const [students, setStudent] = useState<CardProps[]>([])
+  const [user, setUser] = useState<User>({} as User)
 
     function handleAddStudenty() {
       const newStudent = {
@@ -30,8 +40,7 @@ export function Home() {
     useEffect(() => {
       async function fetchData() {
         const response = await fetch('https://api.github.com/users/diegoprocopio0')
-        const data = await response.json()
-        console.log(data)
+        const data = await response.json() as ProfileResponse
          setUser({
           name: data.name,
           avatar: data.avatar_url
@@ -54,8 +63,7 @@ export function Home() {
       <input 
       type="text" 
       placeholder="Type your name"
-      onChange={e => setStudentName(e.target.value
-        )}
+      onChange={e => setStudentName(e.target.value)}
       />
 
       <button type="button" onClick={handleAddStudenty}>
