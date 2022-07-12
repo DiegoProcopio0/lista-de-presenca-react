@@ -10,7 +10,7 @@
 
 ## 💻 Sobre o Projeto
 
- Esse projeto é uma lista de preseça aonde você entra no site e digite o nome e ele guarda essa informação e mostra em tela, que támbem foi consumida a api do github para mostrar as informações de perfil, como nome e avatar.
+ Esse projeto é uma lista de preseça aonde você entra no site e digitar o nome e ele guarda essa informação e mostra em tela, que támbem foi consumida a api do github para mostrar as informações de perfil, como nome e avatar.
 
  ## Imagem do projeto
 
